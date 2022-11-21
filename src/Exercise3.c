@@ -22,9 +22,9 @@ void Ex3(char s1[], char s2[]){
 
 int main(int argc, char *argv[]) {
 	char *n1 = argv[1];
-    char *n2 = argv[2];
-
-    Ex3(n1,n2);
+	char *n2 = argv[2];
+	
+	Ex3(n1,n2);
 		
 	return 0;
 }
