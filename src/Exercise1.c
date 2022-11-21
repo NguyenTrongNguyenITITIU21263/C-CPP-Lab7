@@ -1,5 +1,6 @@
 /*
 1. Given an array of strings, find the longest common prefix of all element.
+If there is no prefix, just print “Prefix not found!”
  ________________________________________________
 | Input: abc abd abf                             |
 | Output: ab                                     |
