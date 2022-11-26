@@ -15,11 +15,42 @@ Ex:
 #include<limits.h>
 #define SIZE 1000
 
-int Ex2(char *str[], int n){
-	//your codes here
+int Ex2(char *str[], int n)
+{
+    int i, j, k, count = 0, flag = 0;
+    int *statusArray = (int*) malloc(sizeof(int)*n);
+    for(i = 0; i < n; i++)
+        statusArray[i] = 0;
+    for(i = 0; i < n; i++)
+    {
+        char *temp = str[i];
+       for(j = i+1; j < n; j++)
+       {
+           if(statusArray[j] == 0) 
+           {
+                char *toBeCompared = str[j];     
+                k = 0;
+                flag = 0;
+                if(strlen(toBeCompared) != strlen(temp))  continue;
+                while(toBeCompared[k]!='\0')
+                {
+                    if(toBeCompared[k] != temp[k])
+                    {
+                        flag = 1;
+                        break;
+                    }
+                    k++;
+                }
 
-
-	return n;
+                if(!flag) statusArray[j] = 1;
+           }
+       }
+    }
+    for(i = 0; i < n; i++)
+    {
+        if(statusArray[i] == 0)count++;
+    } 
+	return count;
 }
 
 int main(int argc, char *argv[]) {
