@@ -3,5 +3,9 @@
         "stdlib.h": "c",
         "math.h": "c",
         "algorithm": "c"
-    }
+    },
+    "cSpell.words": [
+        "findprefix",
+        "pqrs"
+    ]
 }
